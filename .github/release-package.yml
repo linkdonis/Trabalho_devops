@@ -5,13 +5,13 @@ on:
   push:
     tags:
       - "v*"
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
   release:
-    name: Build and Publish Release
     runs-on: ubuntu-latest
 
     steps:
@@ -33,10 +33,8 @@ jobs:
 
           echo "PACKAGE=$PACKAGE" >> "$GITHUB_ENV"
 
-      - name: Publish GitHub Release
+      - name: Upload ZIP to existing release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release create "$GITHUB_REF_NAME" "$PACKAGE" \
-            --title "Release $GITHUB_REF_NAME" \
-            --generate-notes
+          gh release upload "$GITHUB_REF_NAME" "$PACKAGE" --clobber
