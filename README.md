@@ -164,8 +164,4 @@ Com a implementação dos dois workflows, o projeto permite:
 
 ---
 
-## Autor
-
-**linkdonis**
-
 Projeto acadêmico de DevOps desenvolvido com Git, GitHub e GitHub Actions.
