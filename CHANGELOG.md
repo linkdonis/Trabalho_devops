@@ -2,6 +2,7 @@
 
 ## Histórico de alterações
 
+- 2026-10-22 — Update README.md (8b43413)
 - 2026-10-15 — Mudança de pasta release-package.yml (95a9f13)
 - 2026-10-15 — Update release-package.yml (bfa9d1c)
 - 2026-10-15 — Update release-package.yml (4bd8d7f)
